@@ -7,9 +7,22 @@ public class MenuPrincipal : MonoBehaviour
 {
     public Animator animatorCorazon;
     public Animator animatorEngranaje;
+    public GameObject panelOpciones;
     public void EmpezarJuego()
     {
         SceneManager.LoadScene("PantallaHorizontal");
+    }
+
+    public void CargarOpciones()
+    {
+        //
+        panelOpciones.SetActive(true);
+    }
+
+    public void CerrarOpciones()
+    {
+        //
+        panelOpciones.SetActive(false);
     }
 
     //public void MoverCorazon()
