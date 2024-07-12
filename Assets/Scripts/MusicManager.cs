@@ -11,6 +11,8 @@ public class MusicManager : MonoBehaviour
     private bool yaEntreEnBucle = false;
     public float secondsCounter = 0;
 
+
+    // Chusmiflú
     void Start()
     {
         initialClipDurationButNotAll = audioClips[0].length - 0.25f;
