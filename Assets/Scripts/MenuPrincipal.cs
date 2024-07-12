@@ -25,6 +25,11 @@ public class MenuPrincipal : MonoBehaviour
         panelOpciones.SetActive(false);
     }
 
+    public void SalirEscritorio()
+    {
+        Application.Quit();
+    }
+
     //public void MoverCorazon()
     //{
     //    animatorCorazon.SetTrigger("MoverCorazon");

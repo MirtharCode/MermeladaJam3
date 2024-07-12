@@ -25,7 +25,7 @@ public class MenuOpciones : MonoBehaviour
     [SerializeField]
     public GameObject panelOpciones;
 
-    public Slider sliderMaster;
+    //public Slider sliderMaster;
     public Slider sliderMusica;
     public Slider sliderSFX;
 
@@ -104,7 +104,7 @@ public class MenuOpciones : MonoBehaviour
     public void ocultarMenuOpciones()
     {
 
-        PlayerPrefs.SetFloat("Master", sliderMaster.value);
+        //PlayerPrefs.SetFloat("Master", sliderMaster.value);
         PlayerPrefs.SetFloat("Musica", sliderMusica.value);
         PlayerPrefs.SetFloat("SFX", sliderSFX.value);
         PlayerPrefs.Save();
