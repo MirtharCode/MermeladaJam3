@@ -8,11 +8,23 @@ public class MenuPrincipal : MonoBehaviour
     public Animator animatorCorazon;
     public Animator animatorEngranaje;
     public GameObject panelOpciones;
+    public GameObject panelCreditos;
+    public string mermeladaJamURL;
     public void EmpezarJuego()
     {
         SceneManager.LoadScene("PantallaHorizontal");
     }
+    public void CargarCreditos()
+    {
+        //
+        panelCreditos.SetActive(true);
+    }
 
+    public void CerrarCreditos()
+    {
+        //
+        panelCreditos.SetActive(false);
+    }
     public void CargarOpciones()
     {
         //
@@ -28,6 +40,11 @@ public class MenuPrincipal : MonoBehaviour
     public void SalirEscritorio()
     {
         Application.Quit();
+    }
+
+    public void AbrirURL()
+    {
+        Application.OpenURL(mermeladaJamURL);
     }
 
     //public void MoverCorazon()
