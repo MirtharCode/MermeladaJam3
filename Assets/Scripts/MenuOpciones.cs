@@ -113,9 +113,4 @@ public class MenuOpciones : MonoBehaviour
         panelOpciones.SetActive(false);
     }
 
-    public void SalirEscritorio()
-    {
-        Application.Quit();
-    }
-
 }
