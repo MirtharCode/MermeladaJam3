@@ -4423,7 +4423,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1816872209}
+        m_TargetAssemblyTypeName: MenuOpciones, Assembly-CSharp
+        m_MethodName: changeVolumenMusica
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1311472277
 GameObject:
   m_ObjectHideFlags: 0
@@ -5446,7 +5458,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1816872209}
+        m_TargetAssemblyTypeName: MenuOpciones, Assembly-CSharp
+        m_MethodName: changeVolumenFX
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1522319925
 GameObject:
   m_ObjectHideFlags: 0
@@ -5593,6 +5617,7 @@ GameObject:
   - component: {fileID: 1543596035}
   - component: {fileID: 1543596034}
   - component: {fileID: 1543596037}
+  - component: {fileID: 1543596038}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5683,6 +5708,102 @@ MonoBehaviour:
   panelOpciones: {fileID: 1816872205}
   panelCreditos: {fileID: 1818818653}
   mermeladaJamURL: https://itch.io/jam/mermelada-jam-3
+--- !u!82 &1543596038
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543596033}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4934203693512325733, guid: 7e0e386ab50eb90488162741eeeaeda0, type: 2}
+  m_audioClip: {fileID: 8300000, guid: b3cecef806da7924f884871c5a51285e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.393
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1556026284
 GameObject:
   m_ObjectHideFlags: 0
@@ -6815,11 +6936,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 951807970}
   fullScreenToggle: {fileID: 1015901043}
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 7e0e386ab50eb90488162741eeeaeda0, type: 2}
   menuOpciones: {fileID: 0}
   panelOpciones: {fileID: 1816872205}
   sliderMusica: {fileID: 1293561618}
-  sliderSFX: {fileID: 1516237796}
+  sliderFVX: {fileID: 0}
 --- !u!1 &1818818653
 GameObject:
   m_ObjectHideFlags: 0
@@ -6887,7 +7008,7 @@ MonoBehaviour:
   menuOpciones: {fileID: 0}
   panelOpciones: {fileID: 1818818653}
   sliderMusica: {fileID: 0}
-  sliderSFX: {fileID: 0}
+  sliderFVX: {fileID: 0}
 --- !u!114 &1818818656
 MonoBehaviour:
   m_ObjectHideFlags: 0

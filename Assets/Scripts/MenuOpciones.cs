@@ -27,7 +27,7 @@ public class MenuOpciones : MonoBehaviour
 
     //public Slider sliderMaster;
     public Slider sliderMusica;
-    public Slider sliderSFX;
+    public Slider sliderFVX;
 
     // Start is called before the first frame update
     void Start()
@@ -85,11 +85,11 @@ public class MenuOpciones : MonoBehaviour
         Debug.Log("resolution es: " + filteredResolutionList[resolutionIndex]);
     }
 
-    public void changeVolumenMaster(float slidervalue)
-    {
-        Debug.Log("Valor es: " + slidervalue);
-        audioMixer.SetFloat("Master", Mathf.Log10(slidervalue) * 20);
-    }
+    //public void changeVolumenMaster(float slidervalue)
+    //{
+    //    Debug.Log("Valor es: " + slidervalue);
+    //    audioMixer.SetFloat("Master", Mathf.Log10(slidervalue) * 20);
+    //}
 
     public void changeVolumenMusica(float slidervalue)
     {
@@ -98,7 +98,7 @@ public class MenuOpciones : MonoBehaviour
 
     public void changeVolumenFX(float slidervalue)
     {
-        audioMixer.SetFloat("FX", Mathf.Log10(slidervalue) * 20);
+        audioMixer.SetFloat("FVX", Mathf.Log10(slidervalue) * 20);
     }
 
     public void ocultarMenuOpciones()
@@ -106,7 +106,7 @@ public class MenuOpciones : MonoBehaviour
 
         //PlayerPrefs.SetFloat("Master", sliderMaster.value);
         PlayerPrefs.SetFloat("Musica", sliderMusica.value);
-        PlayerPrefs.SetFloat("SFX", sliderSFX.value);
+        PlayerPrefs.SetFloat("FVX", sliderFVX.value);
         PlayerPrefs.Save();
 
         menuOpciones.SetActive(false);
