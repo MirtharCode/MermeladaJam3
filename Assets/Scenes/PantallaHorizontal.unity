@@ -803,6 +803,7 @@ MonoBehaviour:
   animatorCorazones: {fileID: 1573678154}
   animatorBotonComentarios: {fileID: 572279932}
   gM: {fileID: 1638865104}
+  firstTime: 0
 --- !u!4 &210279832
 Transform:
   m_ObjectHideFlags: 0
@@ -1608,7 +1609,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1573678153}
   m_RootOrder: 1
@@ -1638,7 +1639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Has conseguido 50 likes! <3
+  m_text: "\xA1Cambia tu perfil!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3135,6 +3136,7 @@ MonoBehaviour:
   animatorCorazones: {fileID: 1573678154}
   animatorBotonComentarios: {fileID: 572279932}
   gM: {fileID: 0}
+  firstTime: 0
 --- !u!1 &1071370908
 GameObject:
   m_ObjectHideFlags: 0
@@ -4484,6 +4486,7 @@ MonoBehaviour:
   coquetteCounter: 0
   muscleCounter: 0
   naturalCounter: 0
+  heartPoints: 0
   complements: {fileID: 455726760}
   backgrounds: {fileID: 72587249}
   complementsList: []
@@ -4492,9 +4495,10 @@ MonoBehaviour:
   leftButton: {fileID: 1646490240}
   centerButton: {fileID: 542865456}
   rightButton: {fileID: 1696130001}
-  firstComment: {fileID: 2024277647}
-  secondComment: {fileID: 282445535}
-  thirdComment: {fileID: 374611304}
+  firstComment: {fileID: 39420431}
+  secondComment: {fileID: 200104022}
+  thirdComment: {fileID: 389845327}
+  textoLikes: {fileID: 519439983}
   aM: {fileID: 0}
 --- !u!4 &1638865105
 Transform:
@@ -5458,7 +5462,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1573678153}
   m_RootOrder: 0

@@ -10,9 +10,11 @@ public class AnimacionesHUDJuego : MonoBehaviour
     public Animator animatorCorazones;
     public Animator animatorBotonComentarios;
     public GameManager gM;
+    public bool firstTime;
 
     public void Start()
     {
+        firstTime = true;
         //gM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
         StartCoroutine("CargarTextoLikes");
     }
