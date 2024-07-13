@@ -13,12 +13,14 @@ public class ButtonBehaviour : MonoBehaviour
     private void Start()
     {
         yoMismo = GetComponent<Button>();
-        miTexto = gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         gM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
+        Debug.Log(miTexto);
     }
 
     public void LaNombrasion(string nombre)
     {
+
+        Debug.Log(nombre);
 
         if (nombre == "Boots")
             miTexto.text = "Botitas";
