@@ -768,6 +768,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200104022}
   m_CullTransparentMesh: 1
+--- !u!1 &210279830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210279832}
+  - component: {fileID: 210279831}
+  m_Layer: 0
+  m_Name: AnimationsManager
+  m_TagString: AM
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &210279831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210279830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ab4c40e5abc8e46b7fee3740115390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorComments: {fileID: 1662473727}
+  animatorOptions: {fileID: 1638758067}
+  animatorMenu: {fileID: 1697749171}
+  animatorCorazones: {fileID: 1573678154}
+  animatorBotonComentarios: {fileID: 572279932}
+  gM: {fileID: 1638865104}
+--- !u!4 &210279832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210279830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 470.5468, y: 1154.12, z: 1.3210106}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &282445533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1376,7 @@ RectTransform:
   m_Children:
   - {fileID: 2045885934}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1452,7 +1502,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &491196752
 GameObject:
@@ -1976,7 +2026,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 963194229}
+      - m_Target: {fileID: 210279831}
         m_TargetAssemblyTypeName: AnimacionesHUDJuego, Assembly-CSharp
         m_MethodName: CargarComentarios
         m_Mode: 1
@@ -2330,7 +2380,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &716925892
 GameObject:
@@ -3074,7 +3124,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2ab4c40e5abc8e46b7fee3740115390, type: 3}
   m_Name: 
@@ -3084,6 +3134,7 @@ MonoBehaviour:
   animatorMenu: {fileID: 1697749171}
   animatorCorazones: {fileID: 1573678154}
   animatorBotonComentarios: {fileID: 572279932}
+  gM: {fileID: 0}
 --- !u!1 &1071370908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,7 +3710,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1262810917
 MonoBehaviour:
@@ -3995,7 +4046,7 @@ GameObject:
   - component: {fileID: 1530116990}
   - component: {fileID: 1530116989}
   m_Layer: 5
-  m_Name: Options
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4444,6 +4495,7 @@ MonoBehaviour:
   firstComment: {fileID: 2024277647}
   secondComment: {fileID: 282445535}
   thirdComment: {fileID: 374611304}
+  aM: {fileID: 0}
 --- !u!4 &1638865105
 Transform:
   m_ObjectHideFlags: 0

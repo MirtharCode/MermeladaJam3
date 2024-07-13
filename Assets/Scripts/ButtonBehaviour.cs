@@ -19,9 +19,6 @@ public class ButtonBehaviour : MonoBehaviour
 
     public void LaNombrasion(string nombre)
     {
-
-        Debug.Log(nombre);
-
         if (nombre == "Boots")
             miTexto.text = "Botitas";
 

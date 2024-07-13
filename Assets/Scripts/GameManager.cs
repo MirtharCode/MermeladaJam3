@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public List<string> buttonNamesList;
     public Button leftButton, centerButton, rightButton;
     public TextMeshProUGUI firstComment, secondComment, thirdComment;
+    public AnimacionesHUDJuego aM;
 
     void Awake()
     {
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        TopicsRoulette();
+        aM = GameObject.FindGameObjectWithTag("AM").GetComponent<AnimacionesHUDJuego>();
     }
 
     // Update is called once per frame
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
                 backgroundList[i].gameObject.SetActive(true);
         }
 
-        if ((button.name == "Boots") || button.name == "BraceletPinchudo" || button.name == "Cigar" || button.name == "Necklace" || button.name == "Malote")
+        if ((button.name == "Boots") || button.name == "BraceletPinchudo" || button.name == "Cigar" || button.name == "Necklace" || button.name == "Sunglasses" || button.name == "Malote")
             badassCounter++;
 
         else if ((button.name == "Abs") || button.name == "Arms" || button.name == "Headband" || button.name == "MuscleEars" || button.name == "Mazado")
@@ -63,8 +64,10 @@ public class GameManager : MonoBehaviour
         else if ((button.name == "Bandana" || button.name == "Cat") || button.name == "Dog" || button.name == "FannyBag" || button.name == "Natural")
             naturalCounter++;
 
-        else if ((button.name == "Earrings" || button.name == "Eyes" || button.name == "Flowers") || button.name == "Lips" || button.name == "Sunglasses" || button.name == "Coquette")
+        else if ((button.name == "Earrings" || button.name == "Eyes" || button.name == "Flowers") || button.name == "Lips" || button.name == "Coquette")
             coquetteCounter++;
+
+        aM.StartCoroutine(nameof(aM.ReversaActivarAnimaciones));
     }
 
     public void TopicsRoulette()
@@ -99,7 +102,7 @@ public class GameManager : MonoBehaviour
         else if ((button.name == "Abs") || button.name == "Arms" || button.name == "Headband" || button.name == "MuscleEars" || button.name == "Mazado")
             comment.text = "Necesito un mazas";
 
-        else if ((button.name == "Bandana" || button.name == "Cat") || button.name == "Dog" || button.name == "FannyBag" || button.name == "Natural")
+        else if ((button.name == "Bandana" || button.name == "Cat") || button.name == "Dog" || button.name == "Fannybag" || button.name == "Natural")
             comment.text = "Necesito un happyflower";
 
         else if ((button.name == "Earrings" || button.name == "Eyes" || button.name == "Flowers") || button.name == "Lips" || button.name == "Sunglasses" || button.name == "Coquette")
