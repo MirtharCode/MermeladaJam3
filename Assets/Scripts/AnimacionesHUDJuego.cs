@@ -18,14 +18,14 @@ public class AnimacionesHUDJuego : MonoBehaviour
     public IEnumerator CargarTextoLikes()
     {
         animatorCorazones.SetTrigger("CargarTextoCorazones");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         StartCoroutine("CargarBotonComentarios");
     }
 
     public IEnumerator CargarBotonComentarios()
     {
         animatorBotonComentarios.SetTrigger("Pulsado");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
     }
 
     public void CargarComentarios()
@@ -37,14 +37,14 @@ public class AnimacionesHUDJuego : MonoBehaviour
     public IEnumerator SubirMenu()
     {
         animatorMenu.SetTrigger("Subir");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         StartCoroutine("ActivarAnimaciones");
     }
 
     public IEnumerator ActivarAnimaciones()
     {
         animatorComments.SetTrigger("Comments");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         animatorOptions.SetTrigger("Options");
     }
 
