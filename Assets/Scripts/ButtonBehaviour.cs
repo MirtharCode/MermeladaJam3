@@ -86,5 +86,6 @@ public class ButtonBehaviour : MonoBehaviour
     public void Activation()
     {
         gM.StickTheSticker(yoMismo);
+        gM.GivingHearts(yoMismo, gM.firstComment, gM.secondComment, gM.thirdComment);
     }
 }
