@@ -53,9 +53,14 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < backgroundList.Count; i++)
         {
             if (backgroundList[i].name == button.name)
+            {
+                for (int j = 0; j < backgroundList.Count; j++)
+
+                {
+                    backgroundList[j].gameObject.SetActive(false);
+                }
                 backgroundList[i].gameObject.SetActive(true);
-            else
-                backgroundList[i].gameObject.SetActive(false);
+            }
         }
 
         if ((button.name == "Boots") || button.name == "BraceletPinchudo" || button.name == "Cigar" || button.name == "Necklace" || button.name == "Sunglasses" || button.name == "Malote")
