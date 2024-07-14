@@ -6806,7 +6806,7 @@ GameObject:
   - component: {fileID: 1516237795}
   - component: {fileID: 1516237796}
   m_Layer: 5
-  m_Name: SliderFX
+  m_Name: SliderFVX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6982,9 +6982,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1543596037}
-        m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: CerrarOpciones
+      - m_Target: {fileID: 1816872209}
+        m_TargetAssemblyTypeName: MenuOpciones, Assembly-CSharp
+        m_MethodName: ocultarMenuOpciones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8507,7 +8507,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 7e0e386ab50eb90488162741eeeaeda0, type: 2}
   panelOpciones: {fileID: 1816872205}
   sliderMusica: {fileID: 1293561618}
-  sliderFX: {fileID: 1516237796}
+  sliderFVX: {fileID: 1516237796}
 --- !u!1 &1818818653
 GameObject:
   m_ObjectHideFlags: 0
@@ -8526,7 +8526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1818818654
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8573,7 +8573,7 @@ MonoBehaviour:
   audioMixer: {fileID: 0}
   panelOpciones: {fileID: 1818818653}
   sliderMusica: {fileID: 0}
-  sliderFX: {fileID: 0}
+  sliderFVX: {fileID: 0}
 --- !u!114 &1818818656
 MonoBehaviour:
   m_ObjectHideFlags: 0

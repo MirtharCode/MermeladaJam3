@@ -27,11 +27,18 @@ public class MenuOpciones : MonoBehaviour
 
     //public Slider sliderMaster;
     public Slider sliderMusica;
-    public Slider sliderFX;
+    public Slider sliderFVX;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.HasKey("Musica") || PlayerPrefs.HasKey("FVX"))
+        {
+            sliderMusica.value = PlayerPrefs.GetFloat("Musica");
+            sliderFVX.value = PlayerPrefs.GetFloat("FVX");
+        }
+
 
         resolutions = Screen.resolutions;
         filteredResolutionList = new List<Resolution>();
@@ -106,7 +113,7 @@ public class MenuOpciones : MonoBehaviour
 
         //PlayerPrefs.SetFloat("Master", sliderMaster.value);
         PlayerPrefs.SetFloat("Musica", sliderMusica.value);
-        PlayerPrefs.SetFloat("FVX", sliderFX.value);
+        PlayerPrefs.SetFloat("FVX", sliderFVX.value);
         PlayerPrefs.Save();
 
         //menuOpciones.SetActive(false);
