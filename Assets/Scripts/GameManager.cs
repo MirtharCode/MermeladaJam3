@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
 
     public void GivingHearts(Button button, GameObject comment1, GameObject comment2, GameObject comment3)
     {
-        if (button.gameObject.tag == comment1.tag || button.gameObject.tag == comment2.tag || button.gameObject.tag == comment3.tag)
+        if (button.gameObject.tag == comment1.tag)
         {
             heartPoints += 10;
             firstComment.GetComponent<Image>().color = darkgreen;
