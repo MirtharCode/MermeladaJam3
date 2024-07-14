@@ -15,6 +15,9 @@ public class AnimacionesHUDJuego : MonoBehaviour
     public GameManager gM;
     public bool firstTime;
 
+    public AudioSource asMover;
+    public AudioSource asPulsar;
+
     public void Start()
     {
         firstTime = true;
@@ -26,6 +29,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
     {
         Debug.Log("1");
         animatorCorazones.SetTrigger("CargarTextoCorazones");
+        asMover.Play();
         yield return new WaitForSeconds(0.5f);
         StartCoroutine("CargarBotonComentarios");
     }
@@ -34,6 +38,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
     {
         Debug.Log("2");
         animatorBotonComentarios.SetTrigger("Pulsado");
+        asPulsar.Play();
         yield return new WaitForSeconds(0.5f);
     }
 
@@ -54,6 +59,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
         animatorMenu.SetBool("SubirB", false);
         animatorMenu.SetTrigger("Subir");
         yield return new WaitForSeconds(0.5f);
+        asMover.Play();
 
         if (gM.rounds < 8)
         {

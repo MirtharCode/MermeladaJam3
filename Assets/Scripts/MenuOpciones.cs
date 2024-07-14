@@ -7,37 +7,28 @@ using UnityEngine.UI;
 
 public class MenuOpciones : MonoBehaviour
 {
-    //private bool fullscreen = false;
     Resolution[] resolutions;
     public TMP_Dropdown resolutionDropdown;
     List<Resolution> filteredResolutionList;
 
     private float currentRefreshRate;
     private int currentResolutionIndex = 0;
-
-    //public Toggle fullScreenToggle;
-
     [SerializeField]
     AudioMixer audioMixer;
-
-    //public GameObject menuOpciones;
 
     
     public GameObject panelOpciones;
 
-    //public Slider sliderMaster;
     public Slider sliderMusica;
     public Slider sliderFVX;
+
+    public AudioSource asMover;
+    public AudioSource asPulsar;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("Musica") || PlayerPrefs.HasKey("FVX"))
-        {
-            sliderMusica.value = PlayerPrefs.GetFloat("Musica");
-            sliderFVX.value = PlayerPrefs.GetFloat("FVX");
-        }
 
 
         resolutions = Screen.resolutions;
@@ -87,16 +78,8 @@ public class MenuOpciones : MonoBehaviour
         Resolution resolution = filteredResolutionList[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, true);
 
-        //fullScreenToggle.isOn = true;
-
         Debug.Log("resolution es: " + filteredResolutionList[resolutionIndex]);
     }
-
-    //public void changeVolumenMaster(float slidervalue)
-    //{
-    //    Debug.Log("Valor es: " + slidervalue);
-    //    audioMixer.SetFloat("Master", Mathf.Log10(slidervalue) * 20);
-    //}
 
     public void changeVolumenMusica(float slidervalue)
     {
@@ -110,13 +93,11 @@ public class MenuOpciones : MonoBehaviour
 
     public void ocultarMenuOpciones()
     {
-
-        //PlayerPrefs.SetFloat("Master", sliderMaster.value);
+        asPulsar.Play();
         PlayerPrefs.SetFloat("Musica", sliderMusica.value);
         PlayerPrefs.SetFloat("FVX", sliderFVX.value);
         PlayerPrefs.Save();
 
-        //menuOpciones.SetActive(false);
         panelOpciones.SetActive(false);
     }
 
