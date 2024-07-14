@@ -38,7 +38,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
     {
         Debug.Log("2");
         animatorBotonComentarios.SetTrigger("Pulsado");
-        asPulsar.Play();
+        //asPulsar.Play();
         yield return new WaitForSeconds(0.5f);
     }
 

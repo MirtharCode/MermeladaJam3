@@ -13,9 +13,9 @@ public class MenuOpcionesJuego : MonoBehaviour
 
     public void AbrirOpcionesJuego()
     {
-        asPulsar.Play();
         panelOpciones.SetActive(true);
-        
+        asPulsar.Play();
+
     }
     public void Reanudar()
     {
