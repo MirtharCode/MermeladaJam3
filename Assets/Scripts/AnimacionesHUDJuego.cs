@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimacionesHUDJuego : MonoBehaviour
 {
@@ -37,6 +40,10 @@ public class AnimacionesHUDJuego : MonoBehaviour
     public void CargarComentarios()
     {
         Debug.Log("3");
+        gM.firstComment.GetComponent<Image>().color = gM.originalBGColor;
+        gM.secondComment.GetComponent<Image>().color = gM.originalBGColor;
+        gM.thirdComment.GetComponent<Image>().color = gM.originalBGColor;
+
         gM.TopicsRoulette();
         StartCoroutine("SubirMenu");
     }
@@ -48,7 +55,14 @@ public class AnimacionesHUDJuego : MonoBehaviour
         animatorMenu.SetBool("SubirB", false);
         animatorMenu.SetTrigger("Subir");
         yield return new WaitForSeconds(1);
-        StartCoroutine("ActivarAnimaciones");
+
+        if (gM.rounds < 8)
+            StartCoroutine("ActivarAnimaciones");
+
+        else
+        {
+            Debug.Log("juego terminado");
+        }
     }
 
     public IEnumerator ActivarAnimaciones()

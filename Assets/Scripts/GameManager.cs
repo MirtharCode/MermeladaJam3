@@ -11,10 +11,13 @@ public class GameManager : MonoBehaviour
     public GameObject complements, backgrounds;
     public List<GameObject> complementsList, backgroundList;
     public List<string> buttonNamesList, commentsList;
+    public List<Sprite> commentsSpritesList;
     public Button leftButton, centerButton, rightButton;
     public GameObject firstComment, secondComment, thirdComment;
+    public GameObject fCImage, sCImage, tCImage;
     public TextMeshProUGUI textoLikes;
     public AnimacionesHUDJuego aM;
+    public Color originalBGColor, darkgreen;
 
     void Awake()
     {
@@ -33,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        originalBGColor = firstComment.GetComponent<Image>().color;
+        ColorUtility.TryParseHtmlString("#26B735", out darkgreen);
         aM = GameObject.FindGameObjectWithTag("AM").GetComponent<AnimacionesHUDJuego>();
         FillTheComments();
     }
@@ -80,12 +85,13 @@ public class GameManager : MonoBehaviour
 
     public void TopicsRoulette()
     {
+
         int rdm = Random.Range(0, buttonNamesList.Count);
         leftButton.name = buttonNamesList[rdm];
         leftButton.GetComponent<ButtonBehaviour>().LaNombrasion(leftButton.name);
         buttonNamesList.Remove(buttonNamesList[rdm]);
         GivingButtonTags(leftButton);
-        MakingComments(firstComment);
+        MakingComments(firstComment, fCImage);
 
 
         rdm = Random.Range(0, buttonNamesList.Count);
@@ -93,14 +99,14 @@ public class GameManager : MonoBehaviour
         centerButton.GetComponent<ButtonBehaviour>().LaNombrasion(centerButton.name);
         buttonNamesList.Remove(buttonNamesList[rdm]);
         GivingButtonTags(centerButton);
-        MakingComments(secondComment);
+        MakingComments(secondComment, sCImage);
 
         rdm = Random.Range(0, buttonNamesList.Count);
         rightButton.name = buttonNamesList[rdm];
         rightButton.GetComponent<ButtonBehaviour>().LaNombrasion(rightButton.name);
         buttonNamesList.Remove(buttonNamesList[rdm]);
         GivingButtonTags(rightButton);
-        MakingComments(thirdComment);
+        MakingComments(thirdComment, tCImage);
 
         rounds++;
     }
@@ -120,37 +126,41 @@ public class GameManager : MonoBehaviour
             button.gameObject.tag = "Gorgeus";
     }
 
-    public string MakingComments(GameObject comment)
+    public string MakingComments(GameObject comment, GameObject sprite)
     {
-        int rdm = Random.Range(0, commentsList.Count);
+        int rdm1 = Random.Range(0, commentsList.Count);
+        int rdm2 = Random.Range(0, commentsSpritesList.Count);
 
-        if (commentsList[rdm].Contains("arreglen") || commentsList[rdm].Contains("seduzcan") || commentsList[rdm].Contains("mono") || commentsList[rdm].Contains("belleza") || commentsList[rdm].Contains("fashion"))
+        if (commentsList[rdm1].Contains("arreglen") || commentsList[rdm1].Contains("seduzcan") || commentsList[rdm1].Contains("mono") || commentsList[rdm1].Contains("belleza") || commentsList[rdm1].Contains("fashion"))
         {
             comment.gameObject.tag = "Gorgeus";
-            comment.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = commentsList[rdm];
-            commentsList.Remove(commentsList[rdm]);
+            comment.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = commentsList[rdm1];
+            commentsList.Remove(commentsList[rdm1]);
         }
 
-        else if (commentsList[rdm].Contains("Muscul") || commentsList[rdm].Contains("botes") || commentsList[rdm].Contains("fuerte") || commentsList[rdm].Contains("Rock") || commentsList[rdm].Contains("Gym"))
+        else if (commentsList[rdm1].Contains("Muscul") || commentsList[rdm1].Contains("botes") || commentsList[rdm1].Contains("fuerte") || commentsList[rdm1].Contains("Rock") || commentsList[rdm1].Contains("Gym"))
         {
             comment.gameObject.tag = "GymBro";
-            comment.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = commentsList[rdm];
-            commentsList.Remove(commentsList[rdm]);
+            comment.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = commentsList[rdm1];
+            commentsList.Remove(commentsList[rdm1]);
         }
 
-        else if (commentsList[rdm].Contains("moto") || commentsList[rdm].Contains("Vallecas") || commentsList[rdm].Contains("héroe") || commentsList[rdm].Contains("malotes") || commentsList[rdm].Contains("intimide") || commentsList[rdm].Contains("cosplay"))
+        else if (commentsList[rdm1].Contains("moto") || commentsList[rdm1].Contains("Vallecas") || commentsList[rdm1].Contains("héroe") || commentsList[rdm1].Contains("malotes") || commentsList[rdm1].Contains("intimide") || commentsList[rdm1].Contains("cosplay"))
         {
             comment.gameObject.tag = "Malote";
-            comment.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = commentsList[rdm];
-            commentsList.Remove(commentsList[rdm]);
+            comment.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = commentsList[rdm1];
+            commentsList.Remove(commentsList[rdm1]);
         }
 
-        else if (commentsList[rdm].Contains("mascota") || commentsList[rdm].Contains("reciclar") || commentsList[rdm].Contains("micho") || commentsList[rdm].Contains("Vegano") || commentsList[rdm].Contains("naturaleza"))
+        else if (commentsList[rdm1].Contains("mascota") || commentsList[rdm1].Contains("reciclar") || commentsList[rdm1].Contains("micho") || commentsList[rdm1].Contains("Vegano") || commentsList[rdm1].Contains("naturaleza"))
         {
             comment.gameObject.tag = "HappyFlower";
-            comment.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = commentsList[rdm];
-            commentsList.Remove(commentsList[rdm]);
+            comment.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = commentsList[rdm1];
+            commentsList.Remove(commentsList[rdm1]);
         }
+
+
+        sprite.GetComponent<Image>().sprite = commentsSpritesList[rdm2];
 
         return comment.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text;
     }
@@ -158,10 +168,28 @@ public class GameManager : MonoBehaviour
     public void GivingHearts(Button button, GameObject comment1, GameObject comment2, GameObject comment3)
     {
         if (button.gameObject.tag == comment1.tag || button.gameObject.tag == comment2.tag || button.gameObject.tag == comment3.tag)
+        {
             heartPoints += 10;
+            firstComment.GetComponent<Image>().color = darkgreen;
+        }
+
+        else if (button.gameObject.tag == comment2.tag)
+        {
+            heartPoints += 10;
+            secondComment.GetComponent<Image>().color = darkgreen;
+        }
+
+        else if (button.gameObject.tag == comment2.tag)
+        {
+            heartPoints += 10;
+            thirdComment.GetComponent<Image>().color = darkgreen;
+        }
 
         else
+        {
             heartPoints += 5;
+        }
+
 
         textoLikes.text = "Has conseguido " + heartPoints + " likes! <3";
     }

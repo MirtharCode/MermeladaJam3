@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2218,7 +2218,7 @@ GameObject:
   - component: {fileID: 643581583}
   - component: {fileID: 643581582}
   m_Layer: 5
-  m_Name: Image
+  m_Name: SCImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2233,15 +2233,15 @@ RectTransform:
   m_GameObject: {fileID: 643581580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 200104023}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295.1, y: 0}
+  m_AnchoredPosition: {x: -273.85, y: 0}
   m_SizeDelta: {x: 68.0428, y: 68.0428}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &643581582
@@ -3429,7 +3429,7 @@ GameObject:
   - component: {fileID: 1182127214}
   - component: {fileID: 1182127213}
   m_Layer: 5
-  m_Name: Image
+  m_Name: FCImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3444,15 +3444,15 @@ RectTransform:
   m_GameObject: {fileID: 1182127211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 39420432}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295.1, y: 0}
+  m_AnchoredPosition: {x: -273.85, y: 0}
   m_SizeDelta: {x: 68.0428, y: 68.0428}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1182127213
@@ -3804,7 +3804,7 @@ GameObject:
   - component: {fileID: 1282158090}
   - component: {fileID: 1282158089}
   m_Layer: 5
-  m_Name: Image
+  m_Name: TCImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3819,15 +3819,15 @@ RectTransform:
   m_GameObject: {fileID: 1282158087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 389845328}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295.1, y: 0}
+  m_AnchoredPosition: {x: -273.85, y: 0}
   m_SizeDelta: {x: 68.0428, y: 68.0428}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282158089
@@ -4477,14 +4477,36 @@ MonoBehaviour:
   backgroundList: []
   buttonNamesList: []
   commentsList: []
+  commentsSpritesList:
+  - {fileID: 21300000, guid: b7dc6c43b9072a84eb08afd7814386fb, type: 3}
+  - {fileID: 21300000, guid: bf6bb3820e1710b46a8a65c209ee537a, type: 3}
+  - {fileID: 21300000, guid: 2c5ab3120a8e9b8428b1fbd8bb6cbe98, type: 3}
+  - {fileID: 21300000, guid: 15cc88d3a7f7fab41bb8d7665336982e, type: 3}
+  - {fileID: 21300000, guid: 26b1a13c75113344dbea9116527d6352, type: 3}
+  - {fileID: 21300000, guid: a1a188f2b3f088246b277b586dc8385d, type: 3}
+  - {fileID: 21300000, guid: d574b33c388e935489400dc61baace6e, type: 3}
+  - {fileID: 21300000, guid: ab29206c958cdff479158da539b8238b, type: 3}
+  - {fileID: 21300000, guid: 4750359b40bfddc45bfb43535559faaa, type: 3}
+  - {fileID: 21300000, guid: f803b73d70cdae4409633dc7883c69f0, type: 3}
+  - {fileID: 21300000, guid: 7f0180ffc0c80494ea5b9d647af5c5da, type: 3}
+  - {fileID: 21300000, guid: 8b60d8fb3de399a43857b7dce65358d8, type: 3}
   leftButton: {fileID: 1646490240}
   centerButton: {fileID: 542865456}
   rightButton: {fileID: 1696130001}
+  firstPanel: {fileID: 39420431}
+  secondPanel: {fileID: 200104022}
+  thirdPanel: {fileID: 389845327}
   firstComment: {fileID: 39420431}
   secondComment: {fileID: 200104022}
   thirdComment: {fileID: 389845327}
+  fCImage: {fileID: 1182127211}
+  sCImage: {fileID: 643581580}
+  tCImage: {fileID: 1282158087}
   textoLikes: {fileID: 519439983}
   aM: {fileID: 0}
+  originalBGColor: {r: 0, g: 0, b: 0, a: 0}
+  originalTextColor: {r: 0, g: 0, b: 0, a: 0}
+  darkgreen: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1638865105
 Transform:
   m_ObjectHideFlags: 0
