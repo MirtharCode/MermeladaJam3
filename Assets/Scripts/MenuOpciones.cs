@@ -93,12 +93,17 @@ public class MenuOpciones : MonoBehaviour
 
     public void ocultarMenuOpciones()
     {
+        GuardarOpciones();
+
         asPulsar.Play();
+        panelOpciones.SetActive(false);
+    }
+
+    public void GuardarOpciones()
+    {
         PlayerPrefs.SetFloat("Musica", sliderMusica.value);
         PlayerPrefs.SetFloat("FVX", sliderFVX.value);
         PlayerPrefs.Save();
-
-        panelOpciones.SetActive(false);
     }
 
 }
