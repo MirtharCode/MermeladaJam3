@@ -190,8 +190,9 @@ public class GameManager : MonoBehaviour
             heartPoints += 5;
         }
 
-
-        textoLikes.text = "Has conseguido " + heartPoints + " likes! <3";
+        textoLikes.GetComponent<TextMeshProUGUI>().fontSize = 65;
+        textoLikes.GetComponent<TextMeshProUGUI>().alignment = TextAlignmentOptions.CaplineJustified;
+        textoLikes.text = "Has conseguido \n" + heartPoints + " likes! <3";
     }
 
     public void FillTheComments()

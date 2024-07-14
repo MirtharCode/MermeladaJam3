@@ -4493,9 +4493,6 @@ MonoBehaviour:
   leftButton: {fileID: 1646490240}
   centerButton: {fileID: 542865456}
   rightButton: {fileID: 1696130001}
-  firstPanel: {fileID: 39420431}
-  secondPanel: {fileID: 200104022}
-  thirdPanel: {fileID: 389845327}
   firstComment: {fileID: 39420431}
   secondComment: {fileID: 200104022}
   thirdComment: {fileID: 389845327}
@@ -4505,7 +4502,6 @@ MonoBehaviour:
   textoLikes: {fileID: 519439983}
   aM: {fileID: 0}
   originalBGColor: {r: 0, g: 0, b: 0, a: 0}
-  originalTextColor: {r: 0, g: 0, b: 0, a: 0}
   darkgreen: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1638865105
 Transform:
@@ -4580,7 +4576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A tu madre le gust\xF3"
+  m_text: Buscando el amor.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de878f1c89b4320418b05ad9bb57c98e, type: 2}
   m_sharedMaterial: {fileID: -1797955196988366755, guid: de878f1c89b4320418b05ad9bb57c98e, type: 2}

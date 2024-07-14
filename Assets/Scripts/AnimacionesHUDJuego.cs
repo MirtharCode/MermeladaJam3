@@ -26,7 +26,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
     {
         Debug.Log("1");
         animatorCorazones.SetTrigger("CargarTextoCorazones");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine("CargarBotonComentarios");
     }
 
@@ -34,7 +34,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
     {
         Debug.Log("2");
         animatorBotonComentarios.SetTrigger("Pulsado");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
     }
 
     public void CargarComentarios()
@@ -44,7 +44,6 @@ public class AnimacionesHUDJuego : MonoBehaviour
         gM.secondComment.GetComponent<Image>().color = gM.originalBGColor;
         gM.thirdComment.GetComponent<Image>().color = gM.originalBGColor;
 
-        gM.TopicsRoulette();
         StartCoroutine("SubirMenu");
     }
 
@@ -54,10 +53,14 @@ public class AnimacionesHUDJuego : MonoBehaviour
 
         animatorMenu.SetBool("SubirB", false);
         animatorMenu.SetTrigger("Subir");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         if (gM.rounds < 8)
+        {
+            gM.TopicsRoulette();
             StartCoroutine("ActivarAnimaciones");
+        }
+
 
         else
         {
@@ -74,7 +77,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         animatorComments.SetTrigger("Comments");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         animatorOptions.SetTrigger("Options");
     }
 
@@ -83,7 +86,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
         Debug.Log("6");
         animatorComments.SetBool("CommentsB", true);
         animatorOptions.SetBool("OptionsB", true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         StartCoroutine("BajarMenu");
     }
@@ -92,6 +95,6 @@ public class AnimacionesHUDJuego : MonoBehaviour
     {
         Debug.Log("7");
         animatorMenu.SetBool("SubirB", true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
     }
 }
