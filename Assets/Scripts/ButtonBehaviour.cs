@@ -10,6 +10,9 @@ public class ButtonBehaviour : MonoBehaviour
     public Button yoMismo;
     public TextMeshProUGUI miTexto;
 
+    public AudioSource asMover;
+    public AudioSource asPulsar;
+
     private void Start()
     {
         yoMismo = GetComponent<Button>();
@@ -86,6 +89,7 @@ public class ButtonBehaviour : MonoBehaviour
     public void Activation()
     {
         gM.StickTheSticker(yoMismo);
+        asPulsar.Play();
         gM.GivingHearts(yoMismo, gM.firstComment, gM.secondComment, gM.thirdComment);
     }
 }
