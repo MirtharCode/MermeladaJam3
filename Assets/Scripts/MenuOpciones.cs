@@ -15,19 +15,19 @@ public class MenuOpciones : MonoBehaviour
     private float currentRefreshRate;
     private int currentResolutionIndex = 0;
 
-    public Toggle fullScreenToggle;
+    //public Toggle fullScreenToggle;
 
     [SerializeField]
     AudioMixer audioMixer;
 
-    public GameObject menuOpciones;
+    //public GameObject menuOpciones;
 
-    [SerializeField]
+    
     public GameObject panelOpciones;
 
     //public Slider sliderMaster;
     public Slider sliderMusica;
-    public Slider sliderFVX;
+    public Slider sliderFX;
 
     // Start is called before the first frame update
     void Start()
@@ -80,7 +80,7 @@ public class MenuOpciones : MonoBehaviour
         Resolution resolution = filteredResolutionList[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, true);
 
-        fullScreenToggle.isOn = true;
+        //fullScreenToggle.isOn = true;
 
         Debug.Log("resolution es: " + filteredResolutionList[resolutionIndex]);
     }
@@ -106,10 +106,10 @@ public class MenuOpciones : MonoBehaviour
 
         //PlayerPrefs.SetFloat("Master", sliderMaster.value);
         PlayerPrefs.SetFloat("Musica", sliderMusica.value);
-        PlayerPrefs.SetFloat("FVX", sliderFVX.value);
+        PlayerPrefs.SetFloat("FVX", sliderFX.value);
         PlayerPrefs.Save();
 
-        menuOpciones.SetActive(false);
+        //menuOpciones.SetActive(false);
         panelOpciones.SetActive(false);
     }
 
