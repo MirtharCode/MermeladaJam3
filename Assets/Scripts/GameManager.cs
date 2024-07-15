@@ -428,15 +428,15 @@ public class GameManager : MonoBehaviour
         finalesPanel.transform.GetChild(2).gameObject.SetActive(true);
         finalesPanel.transform.GetChild(2).GetChild(2).GetComponent<TextMeshProUGUI>().text = finalDefinitiveLikesCounterNum + " likes";
 
-        if (finalDefinitiveLikesCounterNum <= 75)
+        if (finalDefinitiveLikesCounterNum <= 100)
             finalesPanel.transform.GetChild(2).GetChild(0).gameObject.GetComponent<Image>().sprite = finales[0];
-        else if (finalDefinitiveLikesCounterNum <= 100)
-            finalesPanel.transform.GetChild(2).GetChild(0).gameObject.GetComponent<Image>().sprite = finales[1];
         else if (finalDefinitiveLikesCounterNum <= 125)
-            finalesPanel.transform.GetChild(2).GetChild(0).gameObject.GetComponent<Image>().sprite = finales[2];
+            finalesPanel.transform.GetChild(2).GetChild(0).gameObject.GetComponent<Image>().sprite = finales[1];
         else if (finalDefinitiveLikesCounterNum <= 150)
+            finalesPanel.transform.GetChild(2).GetChild(0).gameObject.GetComponent<Image>().sprite = finales[2];
+        else if (finalDefinitiveLikesCounterNum <= 175)
             finalesPanel.transform.GetChild(2).GetChild(0).gameObject.GetComponent<Image>().sprite = finales[3];
-        else if (finalDefinitiveLikesCounterNum > 150)
+        else if (finalDefinitiveLikesCounterNum > 175)
             finalesPanel.transform.GetChild(2).GetChild(0).gameObject.GetComponent<Image>().sprite = finales[4];
 
         StartCoroutine("ShowRetryButton");
