@@ -29,8 +29,6 @@ public class MenuOpciones : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
         resolutions = Screen.resolutions;
         filteredResolutionList = new List<Resolution>();
 
@@ -57,12 +55,10 @@ public class MenuOpciones : MonoBehaviour
             }
         }
 
-
         resolutionDropdown.AddOptions(options);
 
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-
     }
 
     public void FullScreen(bool fullscreen)
@@ -70,7 +66,6 @@ public class MenuOpciones : MonoBehaviour
 
         Debug.Log("Fullscreen es: " + fullscreen);
         Screen.fullScreen = fullscreen;
-
     }
 
     public void ChangeResolution(int resolutionIndex)

@@ -12,15 +12,15 @@ public class AnimacionesHUDJuego : MonoBehaviour
     public Animator animatorMenu;
     public Animator animatorCorazones;
     public Animator animatorBotonComentarios;
+    public Animator scoreAC;
     public GameManager gM;
-    public bool firstTime;
+    public GameObject buttonToFinal, buttonToInsta;
 
     public AudioSource asMover;
     public AudioSource asPulsar;
 
     public void Start()
     {
-        firstTime = true;
         //gM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
         StartCoroutine("CargarTextoLikes");
     }
@@ -61,7 +61,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         asMover.Play();
 
-        if (gM.rounds < 8)
+        if (gM.rounds < 7)
         {
             gM.TopicsRoulette();
             StartCoroutine("ActivarAnimaciones");
@@ -70,7 +70,7 @@ public class AnimacionesHUDJuego : MonoBehaviour
 
         else
         {
-            Debug.Log("juego terminado");
+            StartCoroutine("MostrarPuntuaciones");
         }
     }
 
@@ -103,4 +103,16 @@ public class AnimacionesHUDJuego : MonoBehaviour
         animatorMenu.SetBool("SubirB", true);
         yield return new WaitForSeconds(0.5f);
     }
+
+    public IEnumerator MostrarPuntuaciones()
+    {
+        Debug.Log("8");
+        gM.ScoreFilling();
+        gM.finalesPanel.SetActive(true);
+        scoreAC.SetBool("Show", true);
+        yield return new WaitForSeconds(4.5f);
+        buttonToFinal.SetActive(true);
+    }
+
+
 }
